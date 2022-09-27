@@ -8,10 +8,6 @@ export default {
   initialize(container) {
     withPluginApi("0.8.41", (api) => {
       const site = container.lookup("service:site");
-      if (site.mobileView) {
-        return;
-      }
-
       try {
         const previewModeSetting = settings.preview_mode;
         const newTabIcon = () => {
